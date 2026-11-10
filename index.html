@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elektro Leonhartsberger | Elektriker Meisterbetrieb Goldwörth</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome 6 Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1E293B',
+                            900: '#0F172A',
+                            950: '#0B1120',
+                        },
+                        amber: {
+                            400: '#FBBF24',
+                            500: '#F59E0B',
+                            600: '#D97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-glow {
+            box-shadow: 0 0 25px -5px rgba(245, 158, 11, 0.3);
+        }
+        .hero-pattern {
+            background-color: #0F172A;
+            background-image: radial-gradient(#1E293B 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased selection:bg-amber-500 selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-amber-500 text-slate-950 font-semibold text-xs sm:text-sm py-2 px-4 text-center flex items-center justify-center gap-2 shadow-inner">
+        <i class="fa-solid fa-bolt-lightning text-slate-900 animate-pulse"></i>
+        <span>24/7 Störungsdienst & Express-Termine im Urfahr-Umgebung & Linz-Land</span>
+        <a href="tel:+436506683950" class="underline font-bold hover:text-white transition ml-2">Direkt anrufen</a>
+    </div>
+
+    <!-- Sticky Navigation Header -->
+    <header class="sticky top-0 z-50 bg-navy-900/95 backdrop-blur-md border-b border-slate-800 text-white transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand / Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-slate-950 font-black text-xl shadow-lg group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-extrabold text-lg sm:text-xl tracking-tight text-white leading-tight">ELEKTRO</span>
+                        <span class="text-xs font-semibold tracking-wider text-amber-400 uppercase">Christian Leonhartsberger</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                    <a href="#leistungen" class="hover:text-amber-400 transition-colors">Leistungen</a>
+                    <a href="#vorteile" class="hover:text-amber-400 transition-colors">Über Uns</a>
+                    <a href="#preise" class="hover:text-amber-400 transition-colors">Kostenrichtwerte</a>
+                    <a href="#bewertungen" class="hover:text-amber-400 transition-colors">Bewertungen</a>
+                    <a href="#kontakt" class="hover:text-amber-400 transition-colors">Kontakt</a>
+                </nav>
+
+                <!-- Phone CTA Button -->
+                <div class="hidden sm:flex items-center gap-4">
+                    <a href="tel:+436506683950" class="flex items-center gap-2.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold px-5 py-2.5 rounded-xl shadow-md transition-all transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+43 650 6683950</span>
+                    </a>
+                </div>
+
+                <!-- Mobile menu toggle -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-900 border-b border-slate-800 px-4 pt-3 pb-6 space-y-3">
+            <a href="#leistungen" class="block text-slate-200 hover:text-amber-400 font-medium py-2">Leistungen</a>
+            <a href="#vorteile" class="block text-slate-200 hover:text-amber-400 font-medium py-2">Über Uns</a>
+            <a href="#preise" class="block text-slate-200 hover:text-amber-400 font-medium py-2">Kostenrichtwerte</a>
+            <a href="#bewertungen" class="block text-slate-200 hover:text-amber-400 font-medium py-2">Bewertungen</a>
+            <a href="#kontakt" class="block text-slate-200 hover:text-amber-400 font-medium py-2">Kontakt</a>
+            <a href="tel:+436506683950" class="w-full text-center flex items-center justify-center gap-2 bg-amber-500 text-slate-950 font-bold py-3 rounded-xl shadow mt-4">
+                <i class="fa-solid fa-phone"></i>
+                <span>Jetzt anrufen: +43 650 6683950</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative hero-pattern text-white py-16 lg:py-24 overflow-hidden border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Text Column -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-amber-400 text-xs sm:text-sm font-semibold">
+                        <i class="fa-solid fa-shield-halved"></i> 10+ Jahre Erfahrung & Meisterqualität in Oberösterreich
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                        Ihr zuverlässiger Elektriker in <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-500">Goldwörth</span> & Umgebung
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Von Neuinstallationen, Altbausanierung und E-Befunden bis hin zu modernen Smart Home Systemen und Photovoltaik-Speichern. Wir bieten nachhaltige Elektrotechnik aus Meisterhand.
+                    </p>
+
+                    <!-- Trust Highlights List -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-xs sm:text-sm text-slate-300 font-medium max-w-xl mx-auto lg:mx-0">
+                        <div class="flex items-center gap-2 justify-center lg:justify-start">
+                            <i class="fa-solid fa-circle-check text-amber-400"></i> Schnelle Termine
+                        </div>
+                        <div class="flex items-center gap-2 justify-center lg:justify-start">
+                            <i class="fa-solid fa-circle-check text-amber-400"></i> Faire Festpreise
+                        </div>
+                        <div class="flex items-center gap-2 justify-center lg:justify-start">
+                            <i class="fa-solid fa-circle-check text-amber-400"></i> ÖVE-Norm Konform
+                        </div>
+                    </div>
+
+                    <!-- Call To Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start">
+                        <a href="tel:+436506683950" class="flex items-center justify-center gap-3 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-8 py-4 rounded-xl shadow-lg gradient-glow transition-all transform hover:-translate-y-1 text-base">
+                            <i class="fa-solid fa-phone text-lg"></i>
+                            <span>Jetzt anrufen: +43 650 6683950</span>
+                        </a>
+                        <a href="#kontakt" class="flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-semibold px-7 py-4 rounded-xl transition-all">
+                            <i class="fa-regular fa-paper-plane"></i>
+                            <span>Kostenloses Angebot</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Hero Image with Floating Cards -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-amber-500 to-amber-600 opacity-30 blur-xl"></div>
+                        <img class="relative rounded-2xl shadow-2xl w-full object-cover h-[380px] sm:h-[460px] border border-slate-700" 
+                             src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=900&q=80" 
+                             alt="Elektriker Christian Leonhartsberger bei der Arbeit"
+                             onerror="this.src='https://placehold.co/800x600/1E293B/F59E0B?text=Elektro+Leonhartsberger'">
+                        
+                        <!-- Floating Badge Card 1 -->
+                        <div class="absolute -bottom-5 -left-5 bg-navy-900/95 backdrop-blur-sm border border-slate-700 p-4 rounded-xl shadow-xl hidden sm:flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center text-lg font-bold">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400 uppercase font-semibold">Qualitätsgarantie</p>
+                                <p class="text-sm font-bold text-white">Staatlich zertifiziert</p>
+                            </div>
+                        </div>
+
+                        <!-- Floating Badge Card 2 -->
+                        <div class="absolute -top-5 -right-5 bg-navy-900/95 backdrop-blur-sm border border-slate-700 p-4 rounded-xl shadow-xl hidden sm:flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg font-bold">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400 uppercase font-semibold">Reaktionszeit</p>
+                                <p class="text-sm font-bold text-white">Schnell vor Ort in GU & L</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid Section -->
+    <section id="leistungen" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-600 font-bold text-sm tracking-wider uppercase">Unsere Fachbereiche</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-2">Komplette Elektrotechnik aus einer Hand</h2>
+                <p class="text-slate-600 mt-4 text-base sm:text-lg">Ob Privathaushalt, Sanierung oder Gewerbeobjekt – wir bieten maßgeschneiderte Lösungen nach neuesten Sicherheitsstandards.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 group">
+                    <div class="w-14 h-14 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors">
+                        <i class="fa-solid fa-house-chimney-crack"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Elektroinstallationen & Sanierung</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Neuinstallationen für Einfamilienhäuser sowie fachgerechte Erneuerung veralteter Leitungen in Altbauten. Inklusive FI-Schutzschalter und Zählerverteiler.</p>
+                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> Kabelverlegung & Steckdosen</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> Verteilerkasten-Erneuerung</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 group">
+                    <div class="w-14 h-14 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors">
+                        <i class="fa-solid fa-file-contract"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">E-Befund & Safety Check</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Gesetzlich vorgeschriebene Sicherheitsprüfungen (E-Check) für Wohnungsvermietung, Hauskauf oder Gewerbe inklusive offizieller Prüfprotokolle.</p>
+                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> Überprüfung aller Schutzleiter</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> Rechtssicherer Prüfbericht</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 group">
+                    <div class="w-14 h-14 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Smart Home & Steuerung</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Intelligente Gebäudeautomation: Automatische Beschattung, Beleuchtungssteuerung, Heizungsregelung und Video-Intercom bequem per Smartphone steuern.</p>
+                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> KNX / Loxone / Ring Systeme</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> Energieeffizienz steigern</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 group">
+                    <div class="w-14 h-14 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors">
+                        <i class="fa-solid fa-charging-station"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Photovoltaik & Wallboxen</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Machen Sie sich unabhängig! Planung und Montage von PV-Anlagen, Batteriespeichern und Wallboxen zum schnellen Laden Ihres Elektroautos.</p>
+                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> Förderberatung & Einreichung</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> 11kW / 22kW Wallbox Installation</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 group">
+                    <div class="w-14 h-14 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors">
+                        <i class="fa-solid fa-plug-circle-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Geräteanschluss & Starkstrom</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Sicherer Fachanschluss von E-Herden, Ceranfeldern, Backöfen, Wärmepumpen sowie die Nachrüstung von 400V-Starkstromsteckdosen.</p>
+                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> Herdanschluss inkl. Garantie</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> CEE Starkstrom 16A/32A</li>
+                    </ul>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 group">
+                    <div class="w-14 h-14 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition-colors">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-navy-900 mb-3">Störungsdienst & Fehlersuche</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Stromausfall im Zimmer? FI-Schalter fliegt ständig raus? Wir lokalisieren Kabelbrüche, Kurzschlüsse und Defekte schnell und zuverlässig.</p>
+                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> Sofortige Fehlerbehebung</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500"></i> Ersatzteil-Service vor Ort</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us / Trust Section -->
+    <section id="vorteile" class="py-20 bg-navy-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                
+                <div>
+                    <span class="text-amber-400 font-bold text-sm tracking-wider uppercase">Warum Elektro Leonhartsberger?</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold mt-2 leading-tight">Ihr regionaler Partner mit Handschlagqualität</h2>
+                    <p class="text-slate-300 mt-4 leading-relaxed">
+                        Als Meisterbetrieb in Goldwörth legen wir höchsten Wert auf persönliche Beratung, pünktliche Ausführung und kompromisslose Sicherheit bei allen Elektroarbeiten.
+                    </p>
+
+                    <div class="space-y-6 mt-8">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-bold shrink-0 border border-amber-500/20">
+                                <i class="fa-solid fa-user-shield"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Über 10 Jahre Praxiserfahrung</h4>
+                                <p class="text-slate-400 text-sm mt-1">Fundiertes Fachwissen gepaart mit modernster Technik für langlebige Ergebnisse.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-bold shrink-0 border border-amber-500/20">
+                                <i class="fa-solid fa-coins"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Transparente Abrechnung</h4>
+                                <p class="text-slate-400 text-sm mt-1">Keine versteckten Anfahrtskosten im Bezirk Urfahr-Umgebung. Klare Angebote vor Arbeitsbeginn.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-bold shrink-0 border border-amber-500/20">
+                                <i class="fa-solid fa-clock-rotate-left"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Schnelle Einsatzbereitschaft</h4>
+                                <p class="text-slate-400 text-sm mt-1">Kurze Anfahrtswege garantieren rasche Hilfe bei akuten Stromstörungen.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="bg-slate-800/80 border border-slate-700 rounded-3xl p-8 backdrop-blur-sm">
+                        <h3 class="text-2xl font-bold text-white mb-6">Regionales Einzugsgebiet</h3>
+                        <p class="text-slate-300 text-sm mb-6">Wir sind schnell vor Ort in Goldwörth sowie allen umliegenden Gemeinden:</p>
+                        
+                        <div class="grid grid-cols-2 gap-3 text-sm font-medium text-slate-200">
+                            <div class="flex items-center gap-2 bg-navy-950/60 p-3 rounded-lg border border-slate-700/60">
+                                <i class="fa-solid fa-location-dot text-amber-400"></i> Goldwörth
+                            </div>
+                            <div class="flex items-center gap-2 bg-navy-950/60 p-3 rounded-lg border border-slate-700/60">
+                                <i class="fa-solid fa-location-dot text-amber-400"></i> Ottensheim
+                            </div>
+                            <div class="flex items-center gap-2 bg-navy-950/60 p-3 rounded-lg border border-slate-700/60">
+                                <i class="fa-solid fa-location-dot text-amber-400"></i> Feldkirchen a.d.D.
+                            </div>
+                            <div class="flex items-center gap-2 bg-navy-950/60 p-3 rounded-lg border border-slate-700/60">
+                                <i class="fa-solid fa-location-dot text-amber-400"></i> Walding
+                            </div>
+                            <div class="flex items-center gap-2 bg-navy-950/60 p-3 rounded-lg border border-slate-700/60">
+                                <i class="fa-solid fa-location-dot text-amber-400"></i> Linz & Leonding
+                            </div>
+                            <div class="flex items-center gap-2 bg-navy-950/60 p-3 rounded-lg border border-slate-700/60">
+                                <i class="fa-solid fa-location-dot text-amber-400"></i> Eferding & Umgebung
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-slate-700 flex items-center justify-between">
+                            <div>
+                                <p class="text-xs text-slate-400">Ihr Standort nicht dabei?</p>
+                                <p class="text-sm font-semibold text-white">Rufen Sie uns einfach direkt an.</p>
+                            </div>
+                            <a href="tel:+436506683950" class="px-4 py-2 bg-amber-500 text-slate-950 font-bold rounded-lg text-xs hover:bg-amber-400 transition">Anfragen</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Cost Guide / Transparent Pricing Section -->
+    <section id="preise" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-600 font-bold text-sm tracking-wider uppercase">Faire Preisgestaltung</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-2">Kostenrichtwerte im Überblick</h2>
+                <p class="text-slate-600 mt-4 text-base sm:text-lg">Wir stehen für Transparenz. Hier finden Sie eine erste Orientierung für gängige Elektroarbeiten.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Price Card 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between hover:border-amber-400 transition">
+                    <div>
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Stundensatz</span>
+                        <h3 class="text-lg font-bold text-navy-900 mt-1">Servicetechniker</h3>
+                        <div class="mt-4 mb-2">
+                            <span class="text-3xl font-extrabold text-navy-900">€60 – €130</span>
+                            <span class="text-slate-500 text-xs"> / Stunde</span>
+                        </div>
+                        <p class="text-xs text-slate-500 leading-relaxed">Für Reparaturen, Fehlersuche, Nachrüstungen und Kleinmontagen.</p>
+                    </div>
+                    <a href="#kontakt" class="mt-6 w-full text-center py-2.5 rounded-xl border border-slate-300 text-slate-700 text-xs font-bold hover:bg-navy-900 hover:text-white hover:border-navy-900 transition">Termin anfragen</a>
+                </div>
+
+                <!-- Price Card 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between hover:border-amber-400 transition">
+                    <div>
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Geräte-Anschluss</span>
+                        <h3 class="text-lg font-bold text-navy-900 mt-1">Herd / Ceranfeld</h3>
+                        <div class="mt-4 mb-2">
+                            <span class="text-3xl font-extrabold text-navy-900">ab €180</span>
+                            <span class="text-slate-500 text-xs"> Pauschale</span>
+                        </div>
+                        <p class="text-xs text-slate-500 leading-relaxed">Fachgerechter Anschluss inkl. Überprüfung der Zuleitung und Funktionsprüfung.</p>
+                    </div>
+                    <a href="#kontakt" class="mt-6 w-full text-center py-2.5 rounded-xl border border-slate-300 text-slate-700 text-xs font-bold hover:bg-navy-900 hover:text-white hover:border-navy-900 transition">Termin anfragen</a>
+                </div>
+
+                <!-- Price Card 3 -->
+                <div class="bg-navy-900 text-white p-6 rounded-2xl shadow-md border border-amber-500/40 relative flex flex-col justify-between">
+                    <span class="absolute -top-3 right-4 bg-amber-500 text-slate-950 text-[10px] uppercase font-bold px-3 py-1 rounded-full">Oft angefragt</span>
+                    <div>
+                        <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">Prüfbefund</span>
+                        <h3 class="text-lg font-bold text-white mt-1">E-Check / E-Befund</h3>
+                        <div class="mt-4 mb-2">
+                            <span class="text-3xl font-extrabold text-amber-400">€260 – €560</span>
+                            <span class="text-slate-400 text-xs"> je nach Objekt</span>
+                        </div>
+                        <p class="text-xs text-slate-400 leading-relaxed">Vollständiges Prüfprotokoll nach ÖVE-Norm für Einfamilienhäuser & Wohnungen.</p>
+                    </div>
+                    <a href="#kontakt" class="mt-6 w-full text-center py-2.5 rounded-xl bg-amber-500 text-slate-950 text-xs font-bold hover:bg-amber-400 transition">Jetzt Befund anfragen</a>
+                </div>
+
+                <!-- Price Card 4 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between hover:border-amber-400 transition">
+                    <div>
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Gebäude-Automation</span>
+                        <h3 class="text-lg font-bold text-navy-900 mt-1">Smart Home Paket</h3>
+                        <div class="mt-4 mb-2">
+                            <span class="text-3xl font-extrabold text-navy-900">ab €220</span>
+                            <span class="text-slate-500 text-xs"> Basis-Einrichtung</span>
+                        </div>
+                        <p class="text-xs text-slate-500 leading-relaxed">Einrichtung von Video-Sprechanlagen, intelligenten Schaltern & App-Steuerung.</p>
+                    </div>
+                    <a href="#kontakt" class="mt-6 w-full text-center py-2.5 rounded-xl border border-slate-300 text-slate-700 text-xs font-bold hover:bg-navy-900 hover:text-white hover:border-navy-900 transition">Termin anfragen</a>
+                </div>
+
+            </div>
+            
+            <p class="text-center text-xs text-slate-500 mt-8">* Alle Preise verstehen sich als Richtwerte exkl. MwSt. Genaues Angebot erfolgt nach kostenloser Erstbesichtigung/Besprechung.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials / Reviews Section -->
+    <section id="bewertungen" class="py-20 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-600 font-bold text-sm tracking-wider uppercase">Kundenstimmen</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 mt-2">Das sagen Hausbesitzer aus der Region</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Review 1 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-sm gap-1 mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm italic leading-relaxed">"Herr Leonhartsberger hat den E-Befund für unser Einfamilienhaus in Ottensheim extrem gründlich und schnell abgewickelt. Sehr kompetente Auskunft und faire Preise!"</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-200 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-slate-300 flex items-center justify-center font-bold text-slate-700">MK</div>
+                        <div>
+                            <p class="text-sm font-bold text-navy-900">Markus K.</p>
+                            <p class="text-xs text-slate-500">Hausbesitzer in Ottensheim</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-sm gap-1 mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm italic leading-relaxed">"Bei unserem Stromausfall in der Küche am Freitagabend war Elektro Leonhartsberger innerhalb kürzester Zeit vor Ort. Der Defekt im Verteilerkasten wurde rasch behoben!"</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-200 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-slate-300 flex items-center justify-center font-bold text-slate-700">SB</div>
+                        <div>
+                            <p class="text-sm font-bold text-navy-900">Sabine B.</p>
+                            <p class="text-xs text-slate-500">Goldwörth</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-sm gap-1 mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm italic leading-relaxed">"Einbau unserer Wallbox und Anbindung an die PV-Anlage verlief absolut reibungslos. Sehr saubere Arbeit und hervorragende Beratung bezüglich Förderung!"</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-200 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-slate-300 flex items-center justify-center font-bold text-slate-700">GR</div>
+                        <div>
+                            <p class="text-sm font-bold text-navy-900">Gerhard R.</p>
+                            <p class="text-xs text-slate-500">Feldkirchen an der Donau</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Lead Form Section -->
+    <section id="kontakt" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12">
+                
+                <!-- Left Info Box -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-amber-600 font-bold text-sm tracking-wider uppercase">Direkter Kontakt</span>
+                        <h2 class="text-3xl font-extrabold text-navy-900 mt-2">Jetzt unverbindlich anfragen</h2>
+                        <p class="text-slate-600 mt-3 text-sm leading-relaxed">
+                            Haben Sie Fragen zu Ihrem Projekt oder benötigen Sie rasche Hilfe? Rufen Sie uns direkt an oder nutzen Sie das Kontaktformular.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <a href="tel:+436506683950" class="flex items-center gap-4 p-4 rounded-xl bg-white border border-slate-200 hover:border-amber-400 transition shadow-sm group">
+                            <div class="w-12 h-12 rounded-lg bg-amber-500 text-slate-950 flex items-center justify-center text-xl shrink-0 group-hover:scale-105 transition">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 font-medium">Telefon / Notdienst</p>
+                                <p class="text-base font-bold text-navy-900">+43 650 6683950</p>
+                            </div>
+                        </a>
+
+                        <div class="flex items-center gap-4 p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
+                            <div class="w-12 h-12 rounded-lg bg-navy-900 text-amber-400 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 font-medium">Standort</p>
+                                <p class="text-sm font-bold text-navy-900">Sonnenfeldweg 38, 4102 Goldwörth, Österreich</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
+                            <div class="w-12 h-12 rounded-lg bg-navy-900 text-amber-400 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 font-medium">Öffnungszeiten</p>
+                                <p class="text-sm font-bold text-navy-900">Mo – Fr: 07:00 – 17:00 Uhr</p>
+                                <p class="text-xs text-amber-600 font-semibold">24/7 Notdienst bei Störungen</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Small Map Embed Box -->
+                    <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-sm h-48 bg-slate-200 relative">
+                        <iframe 
+                            class="w-full h-full border-0"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2651.989301248041!2d14.137!3d48.347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4773950000000000%3A0x0!2sSonnenfeldweg%2038%2C%204102%20Goldw%C3%B6rth!5e0!3m2!1sde!2sat!4v1620000000000" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Right Form Box -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-xl">
+                        <h3 class="text-2xl font-bold text-navy-900 mb-2">Projektanfrage senden</h3>
+                        <p class="text-xs text-slate-500 mb-6">Füllen Sie das Formular aus. Wir melden uns innerhalb von 24 Stunden bei Ihnen.</p>
+
+                        <form id="lead-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Vor- & Nachname *</label>
+                                    <input type="text" required placeholder="Max Mustermann" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none text-sm transition">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Telefonnummer *</label>
+                                    <input type="tel" required placeholder="+43 660 1234567" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none text-sm transition">
+                                </div>
+                            </div>
+
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">E-Mail Adresse</label>
+                                    <input type="email" placeholder="name@beispiel.at" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none text-sm transition">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Gewünschte Leistung</label>
+                                    <select class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none text-sm transition bg-white">
+                                        <option value="elektroinstallation">Elektroinstallation / Sanierung</option>
+                                        <option value="ebefund">E-Befund / E-Check</option>
+                                        <option value="smarthome">Smart Home System</option>
+                                        <option value="photovoltaik">Photovoltaik / Wallbox</option>
+                                        <option value="reparatur">Störung / Reparatur</option>
+                                        <option value="sonstiges">Sonstiges</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Ihre Nachricht / Projektbeschreibung</label>
+                                <textarea rows="4" placeholder="Beschreiben Sie kurz Ihr Anliegen (z.B. Wohnungsgröße, Dringlichkeit)..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none text-sm transition"></textarea>
+                            </div>
+
+                            <div class="flex items-start gap-2 pt-2">
+                                <input type="checkbox" id="privacy" required class="mt-1 rounded text-amber-500 focus:ring-amber-500">
+                                <label for="privacy" class="text-xs text-slate-500">Ich stimme zu, dass meine Angaben zur Kontaktaufnahme gespeichert und verarbeitet werden.</label>
+                            </div>
+
+                            <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 text-base flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>Unverbindliche Anfrage absenden</span>
+                            </button>
+                        </form>
+
+                        <div id="form-success" class="hidden mt-4 p-4 rounded-xl bg-emerald-100 text-emerald-800 text-sm font-semibold text-center border border-emerald-300">
+                            <i class="fa-solid fa-circle-check text-lg mr-1"></i> Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt. Wir melden uns umgehend bei Ihnen.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-lg bg-amber-500 flex items-center justify-center text-slate-950 font-bold text-lg">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <span class="font-bold text-lg text-white">Elektro Leonhartsberger</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Ihr zertifizierter Meisterbetrieb für Elektrotechnik, Gebäudeautomation und Sicherheitsprüfungen in Goldwörth & Oberösterreich.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Schnelllinks</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#leistungen" class="hover:text-amber-400 transition">Elektroinstallationen</a></li>
+                        <li><a href="#leistungen" class="hover:text-amber-400 transition">E-Check & Befund</a></li>
+                        <li><a href="#leistungen" class="hover:text-amber-400 transition">Smart Home</a></li>
+                        <li><a href="#preise" class="hover:text-amber-400 transition">Preise & Richtwerte</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Kontakt & Adresse</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li>Christian Leonhartsberger</li>
+                        <li>Sonnenfeldweg 38</li>
+                        <li>4102 Goldwörth, Austria</li>
+                        <li class="pt-2"><a href="tel:+436506683950" class="text-amber-400 font-bold hover:underline">+43 650 6683950</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Öffnungszeiten</h4>
+                    <p class="text-xs text-slate-300">Montag – Freitag: 07:00 – 17:00 Uhr</p>
+                    <p class="text-xs text-slate-400 mt-2">24h Notdienst bei akuten Stromausfällen im Bezirk Urfahr-Umgebung.</p>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                <p>&copy; 2026 Elektro Leonhartsberger. Alle Rechte vorbehalten.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-slate-300">Impressum</a>
+                    <a href="#" class="hover:text-slate-300">Datenschutz</a>
+                    <a href="#" class="hover:text-slate-300">AGB</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script>
+        // Mobile Navigation Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking nav links
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Lead form interaction handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const successMsg = document.getElementById('form-success');
+            const form = document.getElementById('lead-form');
+            
+            // Show success alert inline
+            successMsg.classList.remove('hidden');
+            form.reset();
+            
+            // Smooth scroll to message
+            successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+</body>
+</html>
